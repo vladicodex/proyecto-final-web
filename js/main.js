@@ -78,6 +78,7 @@ function crear(e){
     e.preventDefault();
 }
 
+
 //Funcion leer
 function leer(){
     let casos = JSON.parse(localStorage.getItem("Casos"));
@@ -92,7 +93,9 @@ function leer(){
         let lugar = casos[i].lugar
 
         document.getElementById("tbody").innerHTML +=
-        `<tr>
+        `
+        <tr>
+            <td><input type="checkbox"></td>
             <td>${fecha}</td>
             <td>${titular}</td>
             <td>${lugar}</td>
@@ -170,8 +173,6 @@ function editar(titular){
                         <textarea id="newdescripcion1" class="form-control" placeholder="${casos[i].descripcion1}"></textarea>
                     </div>
                     <br>
-
-
 
                     <button class="btn btn-success" onclick="actualizar('${i}')">Actualizar</button>
                     <button class="btn btn-primary" onclick="vistaprincipal()">Regresar</button>
@@ -314,10 +315,11 @@ function vistaPrincipal(){
 
             </div>
             <!--Columnas de lectura de registros-->
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <table class="table">
                     <thead class="thead-light">
                     <tr>
+                        <th scope="col">Check</th>
                         <th scope="col">Fecha</th>
                         <th scope="col">Cliente</th>
                         <th scope="col">Abogado</th>
