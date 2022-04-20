@@ -26,14 +26,14 @@
                 <h3 class="mb-4 text-center">¿Eres parte de nuestro bufete?</h3>
                 <form action="#" class="signin-form">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Usuario" required>
+                        <input id="username-field" type="text" class="form-control" placeholder="Usuario" required>
                     </div>
                 <div class="form-group">
                     <input id="password-field" type="password" class="form-control" placeholder="Contraseña" required>
                     <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="form-control btn btn-primary submit px-3">Acceder</button>
+                    <button id="submit-form" onclick=submitLogin() type="submit" class="form-control btn btn-primary submit px-3">Acceder</button>
                 </div>
                 <div class="form-group d-md-flex">
                     <div class="w-50">
