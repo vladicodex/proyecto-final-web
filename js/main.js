@@ -40,6 +40,37 @@ function submitLogin() {
     cargarAbogados();
 
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function agregarNuevoUsuario(){
+
+    const abogados =     {
+        "id": 0,
+        "nombre": "Vladimir Jimenez",
+        "usuario": "vjimenez",
+        "clave": "vjimenez"
+    };
+
+    const jsonString = JSON.stringify(abogados);
+    console.log(jsonString);
+
+    jsonReader("../db/abogados.json", (err, abogados) => {
+        if (err) {
+          console.log("Error reading file:", err);
+          return;
+        }
+        // change value
+        abogados.nombre = NombreIngresado;
+        abogados.usuario = NombreIngresado;
+        abogados.clave = NombreIngresado;
+        fs.writeFile("./customer.json", JSON.stringify(customer), err => {
+          if (err) console.log("Error writing file:", err);
+        });
+      });
+
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 var iteracion = 0;
 

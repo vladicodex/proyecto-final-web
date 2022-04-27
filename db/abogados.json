@@ -10,5 +10,23 @@
         "nombre": "Emilio Contreras",
         "usuario": "econtreras",
         "clave": "econtreras"
+    },
+    {
+        "id": 2,
+        "nombre": "Alejandrina Perez",
+        "usuario": "aperez",
+        "clave": "aperez"
+    },
+    {
+        "id": 3,
+        "nombre": "Jennie Reyes",
+        "usuario": "jreyes",
+        "clave": "jreyes"
+    },
+    {
+        "id": 4,
+        "nombre": "Francisco Rivera",
+        "usuario": "frivera",
+        "clave": "frivera"
     }
 ]
