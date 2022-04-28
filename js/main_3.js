@@ -29,7 +29,7 @@ function crear(e){
 
 
 //Funcion leer2
-function leer2(){
+function leer3(){
     let casos = JSON.parse(localStorage.getItem("Casos"));
     document.getElementById("tbody-3").innerHTML = ""
     for(let i=0; i < casos.length; i++){
@@ -114,7 +114,7 @@ function eliminar(tipoCaso){
     }
 
     localStorage.setItem("Casos",JSON.stringify(casos));
-    leer2();
+    leer3();
 }
 
 //Funcion para mostrar la interfaz principal
@@ -171,7 +171,7 @@ function vistaPrincipal2(){
         </div>
     </div>
     `
-    leer2();
+    leer3();
 }
 
-leer2();
+leer3();
